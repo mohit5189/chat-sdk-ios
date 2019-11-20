@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Benjamin Smiley-andrews. All rights reserved.
 //
 
+#import "UIImage+Additions.h"
+
 @implementation UIImage (Additions)
 
 -(NSString *) saveImageToFileWithName: (NSString *) name withFolder: (NSString *) folder {
