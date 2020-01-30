@@ -329,7 +329,7 @@
 
 -(void) deserialize: (NSDictionary *) value {
     
-    NSNumber * online = value[bOnlinePath];
+    NSNumber * online = [NSNumber numberWithBool: [value[bOnlinePath] boolValue] ];
     if (online) {
         _model.online = online;
     }
