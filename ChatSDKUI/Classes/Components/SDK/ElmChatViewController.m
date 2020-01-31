@@ -492,7 +492,7 @@
 // Set the message height based on the text height
 - (CGFloat)tableView:(UITableView *)tableView_ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     id<PElmMessage> message = [self messageForIndexPath:indexPath];
-    if(message && [message entityID]) {
+    if(message) {
         return [BMessageCell cellHeight:message];
     }
     else {
