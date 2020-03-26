@@ -14,6 +14,7 @@
 @synthesize messageColorMe;
 @synthesize messageColorReply;
 @synthesize rootPath;
+@synthesize dbURL;
 @synthesize appBadgeEnabled;
 @synthesize defaultUserNamePrefix;
 @synthesize defaultUserName = _defaultUserName;

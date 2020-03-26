@@ -40,6 +40,8 @@ typedef enum {
 // this allows you to run multiple chat instances on one Firebase database
 @property (nonatomic, readwrite) NSString * rootPath;
 
+@property (nonatomic, readwrite) NSString * dbURL;
+
 // Enable the unread messages count on the main app badge
 @property (nonatomic, readwrite) BOOL appBadgeEnabled;
 

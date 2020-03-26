@@ -27,7 +27,7 @@
 }
 
 -(void) onlineOn {
-    [[[[FIRDatabase database] reference] child:@".info/connected"] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * snapshot) {
+    [[[[FIRDatabase databaseWithURL:BChatSDK.config.dbURL] reference] child:@".info/connected"] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * snapshot) {
         if (![snapshot.value isEqual: NSNull.null]) {
             NSLog(@"Connected");
         } else {
@@ -37,7 +37,7 @@
 }
 
 -(void) onlineOff {
-    [[[[FIRDatabase database] reference] child:@".info/connected"] removeAllObservers];
+    [[[[FIRDatabase databaseWithURL:BChatSDK.config.dbURL] reference] child:@".info/connected"] removeAllObservers];
 }
 
 -(void) threadsOn: (id<PUser>) user {
