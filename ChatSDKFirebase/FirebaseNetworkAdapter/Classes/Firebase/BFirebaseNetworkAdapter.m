@@ -22,7 +22,7 @@
                 NSString * path = [[NSBundle mainBundle] pathForResource:plist ofType:@"plist"];
                 FIROptions * options = [[FIROptions alloc] initWithContentsOfFile:path];
                 [FIRApp configureWithOptions:options];
-                [FIRDatabase databaseWithUrl:BChatSDK.config.rootPath].persistenceEnabled = YES;
+                [FIRDatabase databaseWithURL:BChatSDK.config.rootPath].persistenceEnabled = YES;
             }
             else {
                 [FIRApp configure];
